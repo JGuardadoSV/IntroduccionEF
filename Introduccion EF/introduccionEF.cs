@@ -10,6 +10,10 @@ namespace Introduccion_EF
     //Contexto, se debe de llamar igual que la cadena de conexión
     public class introduccionEF:DbContext
     {
+        //Todas las entidades que formarán parte de nuestra base de datos
+
+        public DbSet<Alumno> Alumnos { get; set; }
+        
 
     }
 }
