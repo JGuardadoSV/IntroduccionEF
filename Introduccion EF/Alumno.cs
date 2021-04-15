@@ -10,7 +10,7 @@ namespace Introduccion_EF
     {
         public int AlumnoId { get; set; } //Primary Key y propiedad Identity
         public string Nombre { get; set; }
-        
+
     }
 
 }

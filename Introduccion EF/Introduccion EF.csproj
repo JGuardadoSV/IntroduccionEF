@@ -56,12 +56,36 @@
   <ItemGroup>
     <Compile Include="Alumno.cs" />
     <Compile Include="introduccionEF.cs" />
+    <Compile Include="Migrations\202104151505520_primera.cs" />
+    <Compile Include="Migrations\202104151505520_primera.designer.cs">
+      <DependentUpon>202104151505520_primera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104151515236_columna_nueva.cs" />
+    <Compile Include="Migrations\202104151515236_columna_nueva.designer.cs">
+      <DependentUpon>202104151515236_columna_nueva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104151516401_columna_eliminada.cs" />
+    <Compile Include="Migrations\202104151516401_columna_eliminada.designer.cs">
+      <DependentUpon>202104151516401_columna_eliminada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104151505520_primera.resx">
+      <DependentUpon>202104151505520_primera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104151515236_columna_nueva.resx">
+      <DependentUpon>202104151515236_columna_nueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104151516401_columna_eliminada.resx">
+      <DependentUpon>202104151516401_columna_eliminada.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
