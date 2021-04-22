@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,13 +38,32 @@ namespace Introduccion_EF
             // Un alumno
             Alumno alumno = new Alumno();
 
-            alumno = (
-                          from i in db.Alumnos 
-                          where i.AlumnoId == 3 
-                          select i
-                      ).First();
+            /* alumno = (
+                           from i in db.Alumnos 
+                           where i.AlumnoId == 3
+                           select i
 
-            Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre,alumno.AlumnoId);
+                       ).First();*/
+            
+            //expresion lambdas
+            alumno = db.Alumnos.Where(x => x.AlumnoId == 1).First();
+            Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre, alumno.AlumnoId);
+            /*
+            
+            //UPDATE
+            alumno.Nombre = "Maria Hernandez";
+            db.Alumnos.AddOrUpdate(alumno);
+            db.SaveChanges();
+
+             Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre,alumno.AlumnoId);
+            */
+
+            //Delete
+
+            db.Alumnos.Remove(alumno);
+            db.SaveChanges();
+
+           
 
         }
     }

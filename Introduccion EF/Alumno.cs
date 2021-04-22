@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Introduccion_EF
 {
+    // Entity Framework Code First / Model First / Database First
     public class Alumno
     {
         public int AlumnoId { get; set; } //Primary Key y propiedad Identity
