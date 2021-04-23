@@ -72,6 +72,18 @@
     <Compile Include="Migrations\202104231440073_relaciones1.designer.cs">
       <DependentUpon>202104231440073_relaciones1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104231455574_relaciones2.cs" />
+    <Compile Include="Migrations\202104231455574_relaciones2.designer.cs">
+      <DependentUpon>202104231455574_relaciones2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231457097_relaciones3.cs" />
+    <Compile Include="Migrations\202104231457097_relaciones3.designer.cs">
+      <DependentUpon>202104231457097_relaciones3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104231457485_relaciones4.cs" />
+    <Compile Include="Migrations\202104231457485_relaciones4.designer.cs">
+      <DependentUpon>202104231457485_relaciones4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +104,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104231440073_relaciones1.resx">
       <DependentUpon>202104231440073_relaciones1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231455574_relaciones2.resx">
+      <DependentUpon>202104231455574_relaciones2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231457097_relaciones3.resx">
+      <DependentUpon>202104231457097_relaciones3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231457485_relaciones4.resx">
+      <DependentUpon>202104231457485_relaciones4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

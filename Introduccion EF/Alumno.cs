@@ -14,10 +14,9 @@ namespace Introduccion_EF
     public class Alumno
     {
         public int AlumnoId { get; set; } //Primary Key y propiedad Identity
-        [MinLength(3), MaxLength(25)]
+        [MinLength(3), MaxLength(25,ErrorMessage ="Máximo 25 caracteres")]
         [Column("Nombre_Alumno")]
         public string Nombre { get; set; }
-
 
         //Relacion 1 a muchos
         public Carrera Carrera { get; set; }
