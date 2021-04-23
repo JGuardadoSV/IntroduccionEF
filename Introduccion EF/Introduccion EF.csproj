@@ -68,6 +68,10 @@
     <Compile Include="Migrations\202104151516401_columna_eliminada.designer.cs">
       <DependentUpon>202104151516401_columna_eliminada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104231440073_relaciones1.cs" />
+    <Compile Include="Migrations\202104231440073_relaciones1.designer.cs">
+      <DependentUpon>202104231440073_relaciones1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104151516401_columna_eliminada.resx">
       <DependentUpon>202104151516401_columna_eliminada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104231440073_relaciones1.resx">
+      <DependentUpon>202104231440073_relaciones1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
