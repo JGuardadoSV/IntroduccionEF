@@ -11,23 +11,23 @@ namespace Introduccion_EF
     {
         static void Main(string[] args)
         {
+            introduccionEF db = new introduccionEF();
 
             //INSERT
+            Carrera carrera = new Carrera();
+            //select * from carreras where idcarrera=2
+            carrera = db.Carreras.Where(x => x.IdCarrera == 2).First();
 
-            
             Alumno alumno = new Alumno();
-            alumno.Nombre = "Josue Guardado fff";
-            Console.WriteLine("El ID antes de guardar {0}", alumno.AlumnoId);
-
-            introduccionEF db = new introduccionEF();
-            
-            // two ways binding
-
+            alumno.Nombre = "Pedro Perez Perez 5";
+            alumno.Carrera = carrera; // pasando el valor de la llave foranea 
             db.Alumnos.Add(alumno); //Insert
+
+            // two ways binding
 
             db.SaveChanges(); //Envia los cambios / consultas
 
-            Console.WriteLine("El ID despues de guardar {0}", alumno.AlumnoId);
+         
             
 
             //SELECT

@@ -13,7 +13,8 @@ namespace Introduccion_EF
         //Todas las entidades que formarán parte de nuestra base de datos
 
         public DbSet<Alumno> Alumnos { get; set; }
-        
+        public DbSet<Carrera> Carreras { get; set; }
+
 
     }
 }
