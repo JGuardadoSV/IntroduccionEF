@@ -11,8 +11,8 @@ namespace Introduccion_EF
     {
         static void Main(string[] args)
         {
-            introduccionEF db = new introduccionEF();
-
+            //  introduccionEF db = new introduccionEF();
+            /*
             //INSERT
             Carrera carrera = new Carrera();
             //select * from carreras where idcarrera=2
@@ -27,8 +27,8 @@ namespace Introduccion_EF
 
             db.SaveChanges(); //Envia los cambios / consultas
 
-         
-            
+         */
+
 
             //SELECT
             //introduccionEF db = new introduccionEF();
@@ -36,7 +36,7 @@ namespace Introduccion_EF
             //Expresiones Lambdas
 
             // Un alumno
-          //  Alumno alumno = new Alumno();
+            //  Alumno alumno = new Alumno();
 
             /* alumno = (
                            from i in db.Alumnos 
@@ -44,10 +44,10 @@ namespace Introduccion_EF
                            select i
 
                        ).First();*/
-            
+
             //expresion lambdas
-           // alumno = db.Alumnos.Where(x => x.AlumnoId == 1).First();
-         //   Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre, alumno.AlumnoId);
+            // alumno = db.Alumnos.Where(x => x.AlumnoId == 1).First();
+            //   Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre, alumno.AlumnoId);
             /*
             
             //UPDATE
@@ -63,7 +63,14 @@ namespace Introduccion_EF
             db.Alumnos.Remove(alumno);
             db.SaveChanges();
             */
-           
+
+
+            //Propiedades de navegación
+
+            introduccionEF db = new introduccionEF();
+            Alumno alumno = new Alumno();
+            alumno = db.Alumnos.Where(x => x.AlumnoId == 6).First();
+            Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre, alumno.AlumnoId);
 
         }
     }
