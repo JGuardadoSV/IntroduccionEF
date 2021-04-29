@@ -69,8 +69,9 @@ namespace Introduccion_EF
 
             introduccionEF db = new introduccionEF();
             Alumno alumno = new Alumno();
-            alumno = db.Alumnos.Where(x => x.AlumnoId == 6).First();
-            Console.WriteLine("El nombre del alumno es {0} y id {1}", alumno.Nombre, alumno.AlumnoId);
+            alumno = db.Alumnos.Where(x => x.AlumnoId == 9).First();
+            Console.WriteLine("El nombre del alumno es {0}", alumno.Nombre);
+            Console.WriteLine("Está estudiando la carrera de {0}", alumno.Carrera.Nombre);
 
         }
     }

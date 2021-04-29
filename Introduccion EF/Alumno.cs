@@ -18,8 +18,8 @@ namespace Introduccion_EF
         [Column("Nombre_Alumno")]
         public string Nombre { get; set; }
 
-        //Relacion 1 a muchos
-        public Carrera Carrera { get; set; }
+        //Relacion 1 a muchos   /  Propiedad de navegacion
+        public virtual Carrera Carrera { get; set; }
     }
 
     public class Carrera
