@@ -29,6 +29,12 @@ namespace Introduccion_EF
         [MinLength(3), MaxLength(25)] //Entitity Framework Data Annotations
         public string Nombre { get; set; }
 
+        //propiedad de navegacion
+        //conocer todos los alumnos que estudian una carrera
+
+        public virtual List<Alumno> Alumnos { get; set; }
+        
+
     }
 
 }

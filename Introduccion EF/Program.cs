@@ -73,6 +73,16 @@ namespace Introduccion_EF
             Console.WriteLine("El nombre del alumno es {0}", alumno.Nombre);
             Console.WriteLine("Está estudiando la carrera de {0}", alumno.Carrera.Nombre);
 
+            Console.WriteLine("*************************************************");
+
+            Carrera carrera = new Carrera();
+            carrera= db.Carreras.Where(x => x.IdCarrera == 1).First();
+            Console.WriteLine("Carrera: {0}", carrera.Nombre);
+
+            Console.WriteLine("Alumnos inscritos: {0}",carrera.Alumnos.Count);
+            // todos los alumnos inscritos
+            carrera.Alumnos.ForEach(x=>Console.WriteLine(x.Nombre));
+
         }
     }
 }
